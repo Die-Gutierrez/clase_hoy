@@ -10,7 +10,8 @@ class Estudiante
 		float promedio;
 	public:
 		void leer();
-		void escribir();	
+		void escribir();
+		void comprobar();	
 };
 void Estudiante::leer()
 {
@@ -24,12 +25,18 @@ void Estudiante::escribir()
 	cout<<"Su nombre es: "<<nombre<<endl;
 	cout<<"Su promedio es: "<<promedio<<endl;
 }
+void Estudiante::comprobar()
+{
+	if(promedio >= 10.5) cout<<"\nAprobado"<<endl;
+	else cout<<"\nDesaprobado"<<endl;	
+}
 int main()
 {
 	Estudiante e1;
 	
 	e1.leer();
 	e1.escribir();
+	e1.comprobar();
 	
 	return 0;
 }
